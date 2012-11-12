@@ -8,6 +8,7 @@ import java.util.Iterator;
 import java.util.Set;
 
 import android.content.Context;
+import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Color;
@@ -28,6 +29,11 @@ public class SpaceInvaderView extends View {
 	// Dimensions souhaitées
 	private static final int TARGET_HEIGHT = 800;
 	private static final int TARGET_WIDTH = 600;
+	private static final int ALIEN = 0;
+	private static final int LAUNCHER = 0;
+	private static final int MISSILE = 0;
+	private static final int MISSILE2 = 0;
+	private static final int SHIP = 0;
 
 	private Paint paint; // Style pour le texte	
 	private String text; // texte à afficher
@@ -49,7 +55,25 @@ public class SpaceInvaderView extends View {
 	}
 
 
-	
+    public void loadImage(int bitmap, Drawable drawable) {
+        Bitmap bitmap = Bitmap.createBitmap(mTileSize, mTileSize, Bitmap.Config.ARGB_8888);
+        Canvas canvas = new Canvas(bitmap);
+        tile.setBounds(0, 0, mTileSize, mTileSize);
+        tile.draw(canvas);
+
+    }
+    
+    private void initSpaceInvaderView() {
+        setFocusable(true);
+
+        Resources r = this.getContext().getResources();
+        
+        loadImage(ALIEN, r.getDrawable(R.drawable.alien1));
+        loadImage(LAUNCHER, r.getDrawable(R.drawable.ic_launcher));
+        loadImage(MISSILE, r.getDrawable(R.drawable.missile));
+        loadImage(MISSILE2, r.getDrawable(R.drawable.missile2));
+        loadImage(SHIP, r.getDrawable(R.drawable.ship));	
+    }
 
 	void init(){
 		paint = new Paint();
