@@ -22,6 +22,7 @@ public class SpaceInvaderView extends View {
 
 	private Paint paint; // Style pour le texte	
 	private String text; // texte Ã  afficher
+	private Alien alien;
 
 
 	public SpaceInvaderView(Context context) {
@@ -50,7 +51,6 @@ public class SpaceInvaderView extends View {
         return bitmap;
     }
 
-
 	void init(){
 		paint = new Paint();
 		paint.setStyle(Style.STROKE);
@@ -61,10 +61,7 @@ public class SpaceInvaderView extends View {
 		text = "Texte";
 		/* Sélim Boughriet */
 		Bitmap image_alien = loadImage(R.drawable.alien1);
-/*		Bitmap image_launcher = loadImage(R.drawable.ic_launcher, null);
-		Bitmap image_missile = loadImage(R.drawable.missile, null);
-		Bitmap image_missile2 = loadImage(R.drawable.missile2, null);
-		Bitmap image_ship = loadImage(R.drawable.ship, null);*/
+        alien = new Alien(image_alien,0,0);
 	}
 
 	@Override
@@ -75,6 +72,7 @@ public class SpaceInvaderView extends View {
 		if (text != null){
 			canvas.drawText(text, canvas.getWidth()/2,canvas.getHeight()/2, paint);
 		}
+		
 	}
 
 
