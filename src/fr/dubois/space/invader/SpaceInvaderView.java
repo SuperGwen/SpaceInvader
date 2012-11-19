@@ -48,7 +48,7 @@ public class SpaceInvaderView extends View {
 		init();
 	}
 
-
+/* Sélim Boughriet */
     public Bitmap loadImage(int identifiant, Drawable drawable) {
     	int hauteur = drawable.getIntrinsicHeight();
     	int largeur = drawable.getIntrinsicWidth();
@@ -58,6 +58,7 @@ public class SpaceInvaderView extends View {
         return bitmap;
     }
 
+
 	void init(){
 		paint = new Paint();
 		paint.setStyle(Style.STROKE);
@@ -66,7 +67,7 @@ public class SpaceInvaderView extends View {
 		paint.setTextSize(36);
 		paint.setTextAlign(Paint.Align.CENTER);
 		text = "Texte";
-		
+		/* Sélim Boughriet */
 		Bitmap image_alien = loadImage(R.drawable.alien1, null);
 		Bitmap image_launcher = loadImage(R.drawable.ic_launcher, null);
 		Bitmap image_missile = loadImage(R.drawable.missile, null);
