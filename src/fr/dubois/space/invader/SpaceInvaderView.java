@@ -26,7 +26,7 @@ import android.view.View;
 
 public class SpaceInvaderView extends View {
 	
-	// Dimensions souhaitÃ©es
+	// Dimensions souhaitées
 	private static final int TARGET_HEIGHT = 800;
 	private static final int TARGET_WIDTH = 600;
 
@@ -38,14 +38,13 @@ public class SpaceInvaderView extends View {
 		super(context);
 		init();
 	}
-
-	public SpaceInvaderView(Context context, AttributeSet attrs, int defStyle) {
-		super(context, attrs, defStyle);
-		init();
-	}
-
+	
 	public SpaceInvaderView(Context context, AttributeSet attrs) {
 		super(context, attrs);
+		init();
+	}
+	public SpaceInvaderView(Context context, AttributeSet attrs, int defStyle) {
+		super(context, attrs, defStyle);
 		init();
 	}
 
