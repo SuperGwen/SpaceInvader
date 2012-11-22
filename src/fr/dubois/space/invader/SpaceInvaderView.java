@@ -48,6 +48,7 @@ public class SpaceInvaderView extends View {
         Bitmap bitmap = Bitmap.createBitmap(hauteur, largeur, Bitmap.Config.ARGB_8888);
         Canvas canvas = new Canvas(bitmap);
         drawable.setBounds(0, 0, hauteur, largeur);
+        drawable.draw(canvas);
         return bitmap;
     }
 
@@ -72,7 +73,7 @@ public class SpaceInvaderView extends View {
 		if (text != null){
 			canvas.drawText(text, canvas.getWidth()/2,canvas.getHeight()/2, paint);
 		}
-		
+		alien.draw(canvas);
 	}
 
 
