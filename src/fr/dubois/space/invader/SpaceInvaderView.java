@@ -46,9 +46,9 @@ public class SpaceInvaderView extends View {
     	Drawable drawable = r.getDrawable(identifiant);
     	int hauteur = drawable.getIntrinsicHeight();
     	int largeur = drawable.getIntrinsicWidth();
-        Bitmap bitmap = Bitmap.createBitmap(hauteur, largeur, Bitmap.Config.ARGB_8888);
+        Bitmap bitmap = Bitmap.createBitmap(largeur, hauteur, Bitmap.Config.ARGB_8888);
         Canvas canvas = new Canvas(bitmap);
-        drawable.setBounds(0, 0, hauteur, largeur);
+        drawable.setBounds(0, 0, largeur, hauteur);
         drawable.draw(canvas);
         return bitmap;
     }
